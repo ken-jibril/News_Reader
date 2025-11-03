@@ -9,15 +9,42 @@
   </head>
   <body>
 
-    <header class="site-header">
-    <h1>Local News</h1>
+    <aside class="sidebar">
+    <div class="Sidebar-title">Dashboard</div>
+    <nav class="nav-links">
+      <a href="#" class="nav-item">home</a>
+      <a href="#" class="nav-item">About</a>
+      <a href="#" class="nav-item">News</a>
+    </nav>
+  </aside>
+  
+     <!-- Top bar -->
+  <div class="top-bar">
+    <header class="top-header">
+    <div class="title">News Reader</div>
     <div class="search">
       <input id="search-input" placeholder="Search articles (keyword, author, source)" />
       <button id="search-btn">Search</button>
     </div>
+  </div>
   </header>
 
+  <!-- Main page -->
+  <div class="main-content">
+    <!-- Content section -->
+    <section class="content">
+      <div id="featured" class="featured-article" style="display: none;">
+        <img id="featured-image" src="./src/images/news reporter.jpeg" alt="" />
+        <div class="featured-details">
+          <h2 id="featured-title" class="muted"></h2>
+          <p id="featured-author" class="muted"></p>
+          <p id="featured-description"></p>
+          <a id="featured-link" href="" target="_blank">Read more</a>
+          <button id="featured-open" class="btn">Article</button>
+        </div>
+        
 
+    </section>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
