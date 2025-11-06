@@ -12,22 +12,22 @@
   <div class="flex h-container">
 
     <!-- Sidebar -->
-  <aside class="w-1/5 bg-gray-800 text-white p-4">
-      <div class="text-lg font-bold mb-4">Dashboard</div>
+  <aside class="w-1/5 bg-gray-800 text-white p-4 h-screen">
+      <h1 class="text-2xl font-bold mb-4 border-b-2 border-white pb-2">Dashboard</h1>
     <nav class="space-y-2">
-      <a href="#" class="block hover:bg-gray-700 p-2 rounded">home</a>
-      <a href="#" class="block hover:bg-gray-700 p-2 rounded">About</a>
-      <a href="#" class="block hover:bg-gray-700 p-2 rounded">News</a>
+      <a href="#" class="block text-xl hover:bg-gray-700 p-2 rounded">Home</a>
+      <a href="#" class="block text-xl hover:bg-gray-700 p-2 rounded">About</a>
+      <a href="#" class="block text-xl hover:bg-gray-700 p-2 rounded">News</a>
     </nav>
   </aside>
   
   <!-- Main page -->
-  <main class="flex-1 bg-gray-100">
+  <main class="flex-1 bg-white ">
     <header class="flex justify-between items-center bg-gray-700 text-white p-4">
-      <h1 class="text-xl font-semibold"> News Reader</h1>
+      <h1 class="text-2xl font-semibold"> News Reader</h1>
       <div>
-        <input type="text" id="searchInput" placeholder="Search (news, etc.)" class="p-2 text-black rounded">
-        <buttton id="searchBtn" class="bg-blue-500 p-2 rounded">Search</buttton>
+        <input type="search" id="searchInput" placeholder="Search (news, etc.)" class="outline-0 p-2 text-black rounded">
+        <buttton id="searchBtn" class="bg-blue-600 hover:bg-blue-700 p-2 rounded cursor-pointer mx-1 font-semibold text-lg">SEARCH</buttton>
       </div>
     </header>
 
@@ -36,7 +36,9 @@
     </section>
 
     <!-- tailwind breakpoints - responsive design -->
-  <section class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></section>
+  <section class="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    
+  </section>
 
 
   </main>
