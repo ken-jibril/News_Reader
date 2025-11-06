@@ -12,9 +12,9 @@ async function fetchNews (query = "latest") {
         container.innerHTML = '';
         articles.slice(0.6).forEach(article => {
             const card = document.createElement('div');
-            card.className = 'bg-white p=4 rounded shadow';
+            card.className = 'bg-white p-4 rounded shadow-md cursor-pointer';
             card.innerHTML = `
-            <img src="${article.urlToImage}" class="ounded mb-2">
+            <img src="${article.urlToImage}" alt=${article.title} class="rounded mb-2" />
             <h3 class="font-bold">${article.title}</h3>
             <p class="text-sm text-gray-600">By ${article.author || 'Unknown'}</p>
             <p class="text-sm mt-2">${article.description || ''}</p>
