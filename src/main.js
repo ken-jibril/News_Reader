@@ -3,14 +3,14 @@ const container = document.getElementById('newsContainer');
 
 async function fetchNews (query = "latest") {
     const url = `https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`;
-    const response = await fetch(url);
+    const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&apiKey=${apiKey}`);
     const data = await response.json();
     return data.articles;
     }
 
     function displayNews(articles) {
         container.innerHTML = '';
-        articles.slice(0.6).forEach(article => {
+        articles.slice(0,6).forEach(article => {
             const card = document.createElement('div');
             card.className = 'bg-white p-4 rounded shadow-md cursor-pointer';
             card.innerHTML = `
@@ -53,9 +53,9 @@ function showArticleDetails(article) {
 }
 
 try {
-  const res = await fetch(url);
+  const res = fetch(url);
   if (!res.ok) throw new Error("Network error");
-  const data = await res.json();
+  const data = res.json();
   if (!data.articles.length) container.innerHTML = "<p>No results found.</p>";
 } catch (err) {
   container.innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
@@ -67,4 +67,4 @@ try {
   fetchNews(query || "latest");
 });
 
-    export { fetchNews, displayNews };
+   { fetchNews, displayNews };
